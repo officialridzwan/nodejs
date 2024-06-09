@@ -17,7 +17,12 @@ const io = new Server(server);
 const PORT = process.env.PORT || 8080;
 
 const connectedDevices = {};
-const SESSIONS_DIR = path.join(__dirname, 'sessions');
+const SESSIONS_DIR = path.join('/tmp', 'sessions');
+
+if (!fs.existsSync(SESSIONS_DIR)) {
+  fs.mkdirSync(SESSIONS_DIR);
+}
+
 
 if (!fs.existsSync(SESSIONS_DIR)) {
   fs.mkdirSync(SESSIONS_DIR);
