@@ -32,10 +32,10 @@
   "nodemonConfig": {
     "watch": [
       "index.js",
-      "controllers/WhatsappController.js",
+      "WhatsappController.js",
       "routes.js",
       "CustomRouter.js",
-      "views/index.ejs"
+      "index.ejs"
     ],
     "ext": "ejs,json,html"
   }
